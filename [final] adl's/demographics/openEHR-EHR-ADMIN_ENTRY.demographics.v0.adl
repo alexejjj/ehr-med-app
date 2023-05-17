@@ -1,0 +1,90 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-ADMIN_ENTRY.demographics.v0
+
+concept
+	[at0000]	-- Demographics
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"67C54C1A2BC83EC223BF90B771A93ED7">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {	-- Demographics
+		data matches {
+			ITEM_TREE[at1111] matches {	-- Дерево
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at1116] occurrences matches {0..1} matches {	-- Пол
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at1117, 	-- Мужской
+									at1118, 	-- Женский
+									at1119]	-- Неизвестно
+								}
+							}
+						}
+					}
+					ELEMENT[at1110] occurrences matches {0..1} matches {	-- Дата рождения
+						value matches {
+							DV_DATE matches {
+								value matches {yyyy-mm-dd}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Demographics">
+					description = <"unknown">
+				>
+				["at1111"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at1116"] = <
+					text = <"Пол">
+					description = <"*">
+				>
+				["at1117"] = <
+					text = <"Мужской">
+					description = <"*">
+				>
+				["at1118"] = <
+					text = <"Женский">
+					description = <"*">
+				>
+				["at1119"] = <
+					text = <"Неизвестно">
+					description = <"*">
+				>
+				["at1110"] = <
+					text = <"Дата рождения">
+					description = <"*">
+				>
+			>
+		>
+	>

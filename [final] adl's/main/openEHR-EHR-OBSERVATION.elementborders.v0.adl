@@ -1,0 +1,90 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.elementborders.v0
+
+concept
+	[at0000]	-- Elementborders
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"79BB481EA35797937B3E52DDE64937AE">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Elementborders
+		data matches {
+			HISTORY[at0091] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0092] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0093] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0094] occurrences matches {0..1} matches {	-- Границы элемента
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0095, 	-- чёткие
+													at0096]	-- нечёткие
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Elementborders">
+					description = <"unknown">
+				>
+				["at0091"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0092"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0093"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0094"] = <
+					text = <"Границы элемента">
+					description = <"*">
+				>
+				["at0095"] = <
+					text = <"чёткие">
+					description = <"*">
+				>
+				["at0096"] = <
+					text = <"нечёткие">
+					description = <"*">
+				>
+			>
+		>
+	>

@@ -1,0 +1,100 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.freckles.v0
+
+concept
+	[at0000]	-- Freckles
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"71F016A14A006FEF4AEA6EB6BEB3B49F">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Freckles
+		data matches {
+			HISTORY[at0401] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0402] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0403] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0404] occurrences matches {0..1} matches {	-- Наличие веснушек
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0405, 	-- много
+													at0406, 	-- умеренное количество
+													at0407, 	-- единичные
+													at0408]	-- нет
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Freckles">
+					description = <"unknown">
+				>
+				["at0401"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0402"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0403"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0404"] = <
+					text = <"Наличие веснушек">
+					description = <"*">
+				>
+				["at0405"] = <
+					text = <"много">
+					description = <"*">
+				>
+				["at0406"] = <
+					text = <"умеренное количество">
+					description = <"*">
+				>
+				["at0407"] = <
+					text = <"единичные">
+					description = <"*">
+				>
+				["at0408"] = <
+					text = <"нет">
+					description = <"*">
+				>
+			>
+		>
+	>

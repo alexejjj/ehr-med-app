@@ -1,0 +1,232 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-COMPOSITION.finalmainmonitoring.v0
+
+concept
+	[at0000]	-- Finalmainmonitoring
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"2795AE2E7C3FF5842B15C68C900C15EC">
+	>
+
+definition
+	COMPOSITION[at0000] matches {	-- Finalmainmonitoring
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {[openehr::433]}
+			}
+		}
+		content cardinality matches {0..*; unordered} matches {
+			allow_archetype OBSERVATION[at1000] occurrences matches {0..*} matches {	-- Дата визита
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.visitdate\.v0/}
+			}
+			allow_archetype OBSERVATION[at2000] occurrences matches {0..*} matches {	-- Рост
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.height\.v0/}
+			}
+			allow_archetype OBSERVATION[at3000] occurrences matches {0..*} matches {	-- Вес
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.weight\.v0/}
+			}
+			allow_archetype OBSERVATION[at4000] occurrences matches {0..*} matches {	-- Цвет глаз
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.eyecolor\.v0/}
+			}
+			allow_archetype OBSERVATION[at5000] occurrences matches {0..*} matches {	-- Цвет волос
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.haircolor\.v0/}
+			}
+			allow_archetype OBSERVATION[at6000] occurrences matches {0..*} matches {	-- Наличие веснушек
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.freckles\.v0/}
+			}
+			allow_archetype OBSERVATION[at7000] occurrences matches {0..*} matches {	-- Оттенок кожи
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.skintone\.v0/}
+			}
+			allow_archetype OBSERVATION[at8000] occurrences matches {0..*} matches {	-- Краснеет ли кожа при загаре
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.doestheskinturnredwhensunburned\.v0/}
+			}
+			allow_archetype OBSERVATION[at9000] occurrences matches {0..*} matches {	-- Быстрота загара
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.doestheskintaninthesun\.v0/}
+			}
+			allow_archetype OBSERVATION[at9100] occurrences matches {0..*} matches {	-- Частота отдыха на юге
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.howoftendoyouhavevacationinthesouth\.v0/}
+			}
+			allow_archetype OBSERVATION[at9200] occurrences matches {0..*} matches {	-- Использование SPF летом
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.doyouusesunscreeninsummer\.v0/}
+			}
+			allow_archetype OBSERVATION[at9300] occurrences matches {0..*} matches {	-- Когда появилось новообразование
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.whendidthelesionappear\.v0/}
+			}
+			allow_archetype OBSERVATION[at9400] occurrences matches {0..*} matches {	-- Расположение новообразования
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.elementlocation\.v0/}
+			}
+			allow_archetype OBSERVATION[at9500] occurrences matches {0..*} matches {	-- История болезни в семье
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.doyouhaveahistoryofpsoriasis\.v0/}
+			}
+			allow_archetype OBSERVATION[at9600] occurrences matches {0..*} matches {	-- Размер-X
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.sizex\.v0/}
+			}
+			allow_archetype OBSERVATION[at9700] occurrences matches {0..*} matches {	-- Размер-Y
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.sizey\.v0/}
+			}
+			allow_archetype OBSERVATION[at9800] occurrences matches {0..*} matches {	-- Площадь элемента
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.elementarea\.v0/}
+			}
+			allow_archetype OBSERVATION[at9900] occurrences matches {0..*} matches {	-- Границы элемента
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.elementborders\.v0/}
+			}
+			allow_archetype OBSERVATION[at9910] occurrences matches {0..*} matches {	-- Преобладающий цвет
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.dominantcolor\.v0/}
+			}
+			allow_archetype OBSERVATION[at9920] occurrences matches {0..*} matches {	-- Наличие включений
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.inclusions\.v0/}
+			}
+			allow_archetype OBSERVATION[at9930] occurrences matches {0..*} matches {	-- Симметричность элемента
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.elementsymmetry\.v0/}
+			}
+			allow_archetype OBSERVATION[at9940] occurrences matches {0..*} matches {	-- Тактика осмотра
+				include
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype OBSERVATION[at9950] occurrences matches {0..*} matches {	-- Диагноз
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.anemnesis\.v0/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Finalmainmonitoring">
+					description = <"unknown">
+				>
+				["at1000"] = <
+					text = <"Дата визита">
+					description = <"*">
+				>
+				["at2000"] = <
+					text = <"Рост">
+					description = <"*">
+				>
+				["at3000"] = <
+					text = <"Вес">
+					description = <"*">
+				>
+				["at4000"] = <
+					text = <"Цвет глаз">
+					description = <"*">
+				>
+				["at5000"] = <
+					text = <"Цвет волос">
+					description = <"*">
+				>
+				["at6000"] = <
+					text = <"Наличие веснушек">
+					description = <"*">
+				>
+				["at7000"] = <
+					text = <"Оттенок кожи">
+					description = <"*">
+				>
+				["at8000"] = <
+					text = <"Краснеет ли кожа при загаре">
+					description = <"*">
+				>
+				["at9000"] = <
+					text = <"Быстрота загара">
+					description = <"*">
+				>
+				["at9100"] = <
+					text = <"Частота отдыха на юге">
+					description = <"*">
+				>
+				["at9200"] = <
+					text = <"Использование SPF летом">
+					description = <"*">
+				>
+				["at9300"] = <
+					text = <"Когда появилось новообразование">
+					description = <"*">
+				>
+				["at9400"] = <
+					text = <"Расположение новообразования">
+					description = <"*">
+				>
+				["at9500"] = <
+					text = <"История болезни в семье">
+					description = <"*">
+				>
+				["at9600"] = <
+					text = <"Размер-X">
+					description = <"*">
+				>
+				["at9700"] = <
+					text = <"Размер-Y">
+					description = <"*">
+				>
+				["at9800"] = <
+					text = <"Площадь элемента">
+					description = <"*">
+				>
+				["at9900"] = <
+					text = <"Границы элемента">
+					description = <"*">
+				>
+				["at9910"] = <
+					text = <"Преобладающий цвет">
+					description = <"*">
+				>
+				["at9920"] = <
+					text = <"Наличие включений">
+					description = <"*">
+				>
+				["at9930"] = <
+					text = <"Симметричность элемента">
+					description = <"*">
+				>
+				["at9940"] = <
+					text = <"Тактика осмотра">
+					description = <"*">
+				>
+				["at9950"] = <
+					text = <"Диагноз">
+					description = <"*">
+				>
+			>
+		>
+	>

@@ -1,0 +1,76 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.anemnesis.v0
+
+concept
+	[at0000]	-- Anemnesis
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"42249EE75A6CB791372AA5F85294B30C">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Anemnesis
+		data matches {
+			HISTORY[at0011] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0012] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0013] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0014] occurrences matches {0..1} matches {	-- Общий(медицинский диагноз)
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Anemnesis">
+					description = <"unknown">
+				>
+				["at0011"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0012"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0014"] = <
+					text = <"Общий(медицинский диагноз)">
+					description = <"*">
+				>
+			>
+		>
+	>

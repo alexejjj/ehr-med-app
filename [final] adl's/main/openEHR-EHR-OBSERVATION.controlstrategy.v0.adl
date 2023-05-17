@@ -1,0 +1,100 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.controlstrategy.v0
+
+concept
+	[at0000]	-- Controlstrategy
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"8B4BB336E2A335FFF28D57AE64B18252">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Controlstrategy
+		data matches {
+			HISTORY[at0021] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0022] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0023] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0024] occurrences matches {0..1} matches {	-- Тактика осмотра
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0025, 	-- 1 раз в 3 месяца
+													at0026, 	-- 1 раз в 2 месяца
+													at0027, 	-- 1 раз в 1 месяц
+													at0028]	-- 2 раза в 1 месяц
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Controlstrategy">
+					description = <"unknown">
+				>
+				["at0021"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0022"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0024"] = <
+					text = <"Тактика осмотра">
+					description = <"*">
+				>
+				["at0025"] = <
+					text = <"1 раз в 3 месяца">
+					description = <"*">
+				>
+				["at0026"] = <
+					text = <"1 раз в 2 месяца">
+					description = <"*">
+				>
+				["at0027"] = <
+					text = <"1 раз в 1 месяц">
+					description = <"*">
+				>
+				["at0028"] = <
+					text = <"2 раза в 1 месяц">
+					description = <"*">
+				>
+			>
+		>
+	>

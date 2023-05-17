@@ -1,0 +1,90 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.elementsymmetry.v0
+
+concept
+	[at0000]	-- Elementsymmetry
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"6A596AA5B792B0DA91C095FDFB3E1860">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Elementsymmetry
+		data matches {
+			HISTORY[at0201] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0202] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0203] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0204] occurrences matches {0..1} matches {	-- Симметричность элемента
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0205, 	-- симметричный
+													at0206]	-- асимметричный
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Elementsymmetry">
+					description = <"unknown">
+				>
+				["at0201"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0202"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0203"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0204"] = <
+					text = <"Симметричность элемента">
+					description = <"*">
+				>
+				["at0205"] = <
+					text = <"симметричный">
+					description = <"*">
+				>
+				["at0206"] = <
+					text = <"асимметричный">
+					description = <"*">
+				>
+			>
+		>
+	>

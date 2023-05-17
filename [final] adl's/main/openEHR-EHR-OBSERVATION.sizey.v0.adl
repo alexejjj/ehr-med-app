@@ -1,0 +1,85 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.sizey.v0
+
+concept
+	[at0000]	-- Sizey
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"17ECC4AA95B38E5924F811EC50C3F1CC">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Sizey
+		data matches {
+			HISTORY[at2001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at2002] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at2003] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at2004] occurrences matches {0..1} matches {	-- Размер элемента по оси Y
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::122]>
+												list = <
+													["1"] = <
+														units = <"cm">
+														magnitude = <|>=0.0|>
+														precision = <|1|>
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Sizey">
+					description = <"unknown">
+				>
+				["at2001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at2002"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at2003"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at2004"] = <
+					text = <"Размер элемента по оси Y">
+					description = <"*">
+				>
+			>
+		>
+	>

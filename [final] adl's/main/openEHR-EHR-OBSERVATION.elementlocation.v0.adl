@@ -1,0 +1,135 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.elementlocation.v0
+
+concept
+	[at0000]	-- Elementlocation
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"75039D8D9A3FEC74A3009603C9991B55">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Elementlocation
+		data matches {
+			HISTORY[at0101] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0102] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0103] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0104] occurrences matches {0..1} matches {	-- Расположение новообразования
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0105, 	-- волосистая часть головы
+													at0106, 	-- лицо
+													at0107, 	-- шея
+													at0108, 	-- декольте
+													at0109, 	-- плечо
+													at0110, 	-- предплечье
+													at0111, 	-- кисть
+													at0112, 	-- нижняя часть туловища
+													at0113, 	-- бедро
+													at0114, 	-- голень
+													at0115]	-- стопа
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Elementlocation">
+					description = <"unknown">
+				>
+				["at0101"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0102"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0103"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0104"] = <
+					text = <"Расположение новообразования">
+					description = <"*">
+				>
+				["at0105"] = <
+					text = <"волосистая часть головы">
+					description = <"*">
+				>
+				["at0106"] = <
+					text = <"лицо">
+					description = <"*">
+				>
+				["at0107"] = <
+					text = <"шея">
+					description = <"*">
+				>
+				["at0108"] = <
+					text = <"декольте">
+					description = <"*">
+				>
+				["at0109"] = <
+					text = <"плечо">
+					description = <"*">
+				>
+				["at0110"] = <
+					text = <"предплечье">
+					description = <"*">
+				>
+				["at0111"] = <
+					text = <"кисть">
+					description = <"*">
+				>
+				["at0112"] = <
+					text = <"нижняя часть туловища">
+					description = <"*">
+				>
+				["at0113"] = <
+					text = <"бедро">
+					description = <"*">
+				>
+				["at0114"] = <
+					text = <"голень">
+					description = <"*">
+				>
+				["at0115"] = <
+					text = <"стопа">
+					description = <"*">
+				>
+			>
+		>
+	>

@@ -1,0 +1,100 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.eyecolor.v0
+
+concept
+	[at0000]	-- Eyecolor
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"98FBF6C38B954FAFEB4F1B6027F2AD29">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Eyecolor
+		data matches {
+			HISTORY[at0301] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0302] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0303] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0304] occurrences matches {0..1} matches {	-- Цвет глаз
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0305, 	-- серый
+													at0306, 	-- голубой
+													at0307, 	-- зелёный
+													at0308]	-- карий
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Eyecolor">
+					description = <"unknown">
+				>
+				["at0301"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0302"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0303"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0304"] = <
+					text = <"Цвет глаз">
+					description = <"*">
+				>
+				["at0305"] = <
+					text = <"серый">
+					description = <"*">
+				>
+				["at0306"] = <
+					text = <"голубой">
+					description = <"*">
+				>
+				["at0307"] = <
+					text = <"зелёный">
+					description = <"*">
+				>
+				["at0308"] = <
+					text = <"карий">
+					description = <"*">
+				>
+			>
+		>
+	>

@@ -1,0 +1,133 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.inclusions.v0
+
+concept
+	[at0000]	-- Inclusions
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"31702B95A4793C0F346F6B8F9CAD34E1">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Inclusions
+		data matches {
+			HISTORY[at0801] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0802] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0803] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0804] occurrences matches {0..1} matches {	-- Наличие включений
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0805, 	-- единичные
+													at0806, 	-- множественные
+													at0813]	-- нет
+												}
+											}
+										}
+									}
+									ELEMENT[at0807] occurrences matches {0..1} matches {	-- Цвет включений
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0808, 	-- красный
+													at0809, 	-- бежевый
+													at0810, 	-- коричневый
+													at0811, 	-- чёрный
+													at0812]	-- нет
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Inclusions">
+					description = <"unknown">
+				>
+				["at0801"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0802"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0803"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0804"] = <
+					text = <"Наличие включений">
+					description = <"*">
+				>
+				["at0805"] = <
+					text = <"единичные">
+					description = <"*">
+				>
+				["at0806"] = <
+					text = <"множественные">
+					description = <"*">
+				>
+				["at0807"] = <
+					text = <"Цвет включений">
+					description = <"*">
+				>
+				["at0808"] = <
+					text = <"красный">
+					description = <"*">
+				>
+				["at0809"] = <
+					text = <"бежевый">
+					description = <"*">
+				>
+				["at0810"] = <
+					text = <"коричневый">
+					description = <"*">
+				>
+				["at0811"] = <
+					text = <"чёрный">
+					description = <"*">
+				>
+				["at0812"] = <
+					text = <"нет">
+					description = <"*">
+				>
+				["at0813"] = <
+					text = <"нет">
+					description = <"*">
+				>
+			>
+		>
+	>

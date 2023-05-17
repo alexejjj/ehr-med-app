@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<template xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="openEHR/v1/Template">
+  <id>ad8d3c40-227a-4756-bf57-896aa42a8a77</id>
+  <name>finalMainMonitor</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.finalmainmonitoring.v0" concept_name="Finalmainmonitoring">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.visitdate.v0" concept_name="Visitdate" path="/content[at1000]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.height.v0" concept_name="Height" path="/content[at2000]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.weight.v0" concept_name="Weight" path="/content[at3000]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.eyecolor.v0" concept_name="Eyecolor" path="/content[at4000]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.haircolor.v0" concept_name="Haircolor" path="/content[at5000]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.freckles.v0" concept_name="Freckles" path="/content[at6000]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.skintone.v0" concept_name="Skintone" path="/content[at7000]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.doestheskinturnredwhensunburned.v0" concept_name="Doestheskinturnredwhensunburned" path="/content[at8000]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.doestheskintaninthesun.v0" concept_name="Doestheskintaninthesun" path="/content[at9000]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.howoftendoyouhavevacationinthesouth.v0" concept_name="Howoftendoyouhavevacationinthesouth" path="/content[at9100]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.doyouusesunscreeninsummer.v0" concept_name="Doyouusesunscreeninsummer" path="/content[at9200]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.whendidthelesionappear.v0" concept_name="Whendidthelesionappear" path="/content[at9300]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.elementlocation.v0" concept_name="Elementlocation" path="/content[at9400]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.doyouhaveahistoryofpsoriasis.v0" concept_name="Doyouhaveahistoryofpsoriasis" path="/content[at9500]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.sizex.v0" concept_name="Sizex" path="/content[at9600]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.sizey.v0" concept_name="Sizey" path="/content[at9700]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.elementarea.v0" concept_name="Elementarea" path="/content[at9800]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.elementborders.v0" concept_name="Elementborders" path="/content[at9900]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.dominantcolor.v0" concept_name="Dominantcolor" path="/content[at9910]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.inclusions.v0" concept_name="Inclusions" path="/content[at9920]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.elementsymmetry.v0" concept_name="Elementsymmetry" path="/content[at9930]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.controlstrategy.v0" concept_name="Controlstrategy" path="/content[at9940]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.anemnesis.v0" concept_name="Anemnesis" path="/content[at9950]" />
+    <Context />
+  </definition>
+</template>

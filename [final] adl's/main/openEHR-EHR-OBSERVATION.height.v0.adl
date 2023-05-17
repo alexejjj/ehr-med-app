@@ -1,0 +1,85 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.height.v0
+
+concept
+	[at0000]	-- Height
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"2AC6F8246056D7049602F04CD8007881">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Height
+		data matches {
+			HISTORY[at0601] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0602] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0603] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0604] occurrences matches {0..1} matches {	-- Рост пациента
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::122]>
+												list = <
+													["1"] = <
+														units = <"cm">
+														magnitude = <|0.0..270.0|>
+														precision = <|1|>
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Height">
+					description = <"unknown">
+				>
+				["at0601"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0602"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0603"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0604"] = <
+					text = <"Рост пациента">
+					description = <"*">
+				>
+			>
+		>
+	>

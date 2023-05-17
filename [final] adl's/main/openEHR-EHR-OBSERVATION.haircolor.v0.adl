@@ -1,0 +1,100 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.haircolor.v0
+
+concept
+	[at0000]	-- Haircolor
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"F829113FE669164023A897190F659F28">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Haircolor
+		data matches {
+			HISTORY[at0501] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0502] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0503] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0504] occurrences matches {0..1} matches {	-- Цвет волос
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0505, 	-- блондин(светлые)
+													at0506, 	-- рыжий
+													at0507, 	-- тёмный(каштановые)
+													at0508]	-- брюнет(чёрные)
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Haircolor">
+					description = <"unknown">
+				>
+				["at0501"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0502"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0503"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0504"] = <
+					text = <"Цвет волос">
+					description = <"*">
+				>
+				["at0505"] = <
+					text = <"блондин(светлые)">
+					description = <"*">
+				>
+				["at0506"] = <
+					text = <"рыжий">
+					description = <"*">
+				>
+				["at0507"] = <
+					text = <"тёмный(каштановые)">
+					description = <"*">
+				>
+				["at0508"] = <
+					text = <"брюнет(чёрные)">
+					description = <"*">
+				>
+			>
+		>
+	>

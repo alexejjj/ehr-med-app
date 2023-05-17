@@ -1,0 +1,85 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.elementarea.v0
+
+concept
+	[at0000]	-- Elementarea
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"AA3CB6B677D1CB55286B353F975B88E7">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Elementarea
+		data matches {
+			HISTORY[at0081] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0082] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0083] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0084] occurrences matches {0..1} matches {	-- Общая площадь элемента
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::335]>
+												list = <
+													["1"] = <
+														units = <"cm2">
+														magnitude = <|>=0.0|>
+														precision = <|1|>
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Elementarea">
+					description = <"unknown">
+				>
+				["at0081"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0082"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0083"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0084"] = <
+					text = <"Общая площадь элемента">
+					description = <"*">
+				>
+			>
+		>
+	>

@@ -1,0 +1,85 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.weight.v0
+
+concept
+	[at0000]	-- Weight
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"B7D923E9A20FE8573A96A880250692FB">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Weight
+		data matches {
+			HISTORY[at4001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at4002] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at4003] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at4004] occurrences matches {0..1} matches {	-- Вес пациента
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::124]>
+												list = <
+													["1"] = <
+														units = <"kg">
+														magnitude = <|0.0..650.0|>
+														precision = <|1|>
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Weight">
+					description = <"unknown">
+				>
+				["at4001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at4002"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at4003"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at4004"] = <
+					text = <"Вес пациента">
+					description = <"*">
+				>
+			>
+		>
+	>

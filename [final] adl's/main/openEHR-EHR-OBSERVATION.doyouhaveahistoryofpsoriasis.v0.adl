@@ -1,0 +1,90 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.doyouhaveahistoryofpsoriasis.v0
+
+concept
+	[at0000]	-- Doyouhaveahistoryofpsoriasis
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"11141CB957C437B5EBB62524AA7795B9">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Doyouhaveahistoryofpsoriasis
+		data matches {
+			HISTORY[at0061] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0062] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0063] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0064] occurrences matches {0..1} matches {	-- Были ли случаи кожных опухолей в Вашей семье
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0065, 	-- да
+													at0066]	-- нет
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Doyouhaveahistoryofpsoriasis">
+					description = <"unknown">
+				>
+				["at0061"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0062"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0063"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0064"] = <
+					text = <"Были ли случаи кожных опухолей в Вашей семье">
+					description = <"*">
+				>
+				["at0065"] = <
+					text = <"да">
+					description = <"*">
+				>
+				["at0066"] = <
+					text = <"нет">
+					description = <"*">
+				>
+			>
+		>
+	>

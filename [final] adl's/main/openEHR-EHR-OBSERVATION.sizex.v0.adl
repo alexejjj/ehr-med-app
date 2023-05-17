@@ -1,0 +1,85 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.sizex.v0
+
+concept
+	[at0000]	-- Sizex
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"3EBB76FB1BC6A86A6B5E2ECD324EE18C">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Sizex
+		data matches {
+			HISTORY[at1001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at1002] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at1003] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at1004] occurrences matches {0..1} matches {	-- Размер элемента по оси X
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::122]>
+												list = <
+													["1"] = <
+														units = <"cm">
+														magnitude = <|>=0.0|>
+														precision = <|1|>
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Sizex">
+					description = <"unknown">
+				>
+				["at1001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at1002"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at1003"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at1004"] = <
+					text = <"Размер элемента по оси X">
+					description = <"*">
+				>
+			>
+		>
+	>

@@ -1,0 +1,105 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.doestheskintaninthesun.v0
+
+concept
+	[at0000]	-- Doestheskintaninthesun
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"164B15035379668F2FE195B2821F9536">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Doestheskintaninthesun
+		data matches {
+			HISTORY[at0031] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0032] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0033] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0034] occurrences matches {0..1} matches {	-- Загорает ли кожа на солнце
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0035, 	-- сгорает быстро и сильно
+													at0036, 	-- умеренно сгорает
+													at0037, 	-- иногда сгорает
+													at0038, 	-- сгорает редко
+													at0039]	-- не сгорает
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Doestheskintaninthesun">
+					description = <"unknown">
+				>
+				["at0031"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0032"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0033"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0034"] = <
+					text = <"Загорает ли кожа на солнце">
+					description = <"*">
+				>
+				["at0035"] = <
+					text = <"сгорает быстро и сильно">
+					description = <"*">
+				>
+				["at0036"] = <
+					text = <"умеренно сгорает">
+					description = <"*">
+				>
+				["at0037"] = <
+					text = <"иногда сгорает">
+					description = <"*">
+				>
+				["at0038"] = <
+					text = <"сгорает редко">
+					description = <"*">
+				>
+				["at0039"] = <
+					text = <"не сгорает">
+					description = <"*">
+				>
+			>
+		>
+	>

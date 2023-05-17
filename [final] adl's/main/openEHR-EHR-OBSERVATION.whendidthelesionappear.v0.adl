@@ -1,0 +1,95 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.whendidthelesionappear.v0
+
+concept
+	[at0000]	-- Whendidthelesionappear
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"F72D14F5F2579EE71A394DED6511B7CA">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Whendidthelesionappear
+		data matches {
+			HISTORY[at5001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at5002] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at5003] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at5004] occurrences matches {0..1} matches {	-- Когда появилось новообразование
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at5005, 	-- помню с детства
+													at5006, 	-- недавно
+													at5007]	-- не могу ответить
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Whendidthelesionappear">
+					description = <"unknown">
+				>
+				["at5001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at5002"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at5003"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at5004"] = <
+					text = <"Когда появилось новообразование">
+					description = <"*">
+				>
+				["at5005"] = <
+					text = <"помню с детства">
+					description = <"*">
+				>
+				["at5006"] = <
+					text = <"недавно">
+					description = <"*">
+				>
+				["at5007"] = <
+					text = <"не могу ответить">
+					description = <"*">
+				>
+			>
+		>
+	>
