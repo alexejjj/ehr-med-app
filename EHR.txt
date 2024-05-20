@@ -1,0 +1,9 @@
+УЗА
+GND-2024-00987
+5e5c93b7-e8a9-401c-9111-b48f6ea11ecc
+
+static uid
+d4728176-9529-4279-9ada-766ace4ec972::local.ehrbase.org::1
+
+dynamic uid
+5bd1c363-9ec3-4fca-81a8-4befccaff5eb::local.ehrbase.org::1

@@ -1,0 +1,80 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-COMPOSITION.staticspecs.v0
+
+concept
+	[at0000]	-- Staticspecs
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"03E64012199B3CB59D28E06EF5E812C5">
+	>
+
+definition
+	COMPOSITION[at0000] matches {	-- Staticspecs
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {[openehr::433]}
+			}
+		}
+		content cardinality matches {0..*; unordered} matches {
+			allow_archetype OBSERVATION[at0001] occurrences matches {0..*} matches {	-- Название оборудования
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.equipmentname\.v0/}
+			}
+			allow_archetype OBSERVATION[at0002] occurrences matches {0..*} matches {	-- Модель оборудования
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.equipmentmodel\.v0/}
+			}
+			allow_archetype OBSERVATION[at0003] occurrences matches {0..*} matches {	-- Название производителя
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.manufacturername\.v0/}
+			}
+			allow_archetype OBSERVATION[at0004] occurrences matches {0..*} matches {	-- Специализация
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.specs\.v0/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Staticspecs">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Название оборудования">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"Модель оборудования">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Название производителя">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"Специализация">
+					description = <"*">
+				>
+			>
+		>
+	>

@@ -1,0 +1,143 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.dynamicspecs.v0
+
+concept
+	[at0000]	-- Dynamicspecs
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"D2F8CD64A9DB5ADE0B92B6042252D738">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Dynamicspecs
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Дата установки
+										value matches {
+											DV_DATE matches {
+												value matches {yyyy-mm-dd}
+											}
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Дата последнего технического обслуживания
+										value matches {
+											DV_DATE matches {
+												value matches {yyyy-mm-dd}
+											}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {	-- Дата следующего планового обслуживания
+										value matches {
+											DV_DATE matches {
+												value matches {yyyy-mm-dd}
+											}
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {	-- Записи о неисправностях и ремонте
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {	-- Координаты установленного оборудования широта
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::497]>
+												list = <
+													["1"] = <
+														units = <"°">
+														precision = <|5|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {	-- Координаты установленного оборудования долгота
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::497]>
+												list = <
+													["1"] = <
+														units = <"°">
+														precision = <|5|>
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Dynamicspecs">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Дата установки">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Дата последнего технического обслуживания">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Дата следующего планового обслуживания">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Записи о неисправностях и ремонте">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Координаты установленного оборудования широта">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"Координаты установленного оборудования долгота">
+					description = <"*">
+				>
+			>
+		>
+	>

@@ -1,0 +1,56 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-COMPOSITION.cfihosspecs.v0
+
+concept
+	[at0000]	-- Cfihosspecs
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"2417F4037F632E486390BBAF2E2FC831">
+	>
+
+definition
+	COMPOSITION[at0000] matches {	-- Cfihosspecs
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {[openehr::433]}
+			}
+		}
+		content cardinality matches {0..*; unordered} matches {
+			allow_archetype OBSERVATION[at0001] occurrences matches {0..*} matches {	-- CFIHOS
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.cfihos\.v0/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Cfihosspecs">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"CFIHOS">
+					description = <"*">
+				>
+			>
+		>
+	>

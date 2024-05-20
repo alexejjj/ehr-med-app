@@ -1,0 +1,517 @@
+{
+	"_type": "COMPOSITION",
+	"name": {
+		"_type": "DV_TEXT",
+		"value": "Staticspecs"
+	},
+	"archetype_details": {
+		"archetype_id": {
+			"value": "openEHR-EHR-COMPOSITION.staticspecs.v0"
+		},
+		"template_id": {
+			"value": "staticISO"
+		},
+		"rm_version": "1.0.2"
+	},
+	"language": {
+		"_type": "CODE_PHRASE",
+		"terminology_id": {
+			"_type": "TERMINOLOGY_ID",
+			"value": "ISO_639-1"
+		},
+		"code_string": "ru"
+	},
+	"territory": {
+		"_type": "CODE_PHRASE",
+		"terminology_id": {
+			"_type": "TERMINOLOGY_ID",
+			"value": "ISO_3166-1"
+		},
+		"code_string": "UY"
+	},
+	"category": {
+		"_type": "DV_CODED_TEXT",
+		"value": "event",
+		"defining_code": {
+			"_type": "CODE_PHRASE",
+			"terminology_id": {
+				"_type": "TERMINOLOGY_ID",
+				"value": "openehr"
+			},
+			"code_string": "433"
+		}
+	},
+	"composer": {
+		"_type": "PARTY_IDENTIFIED",
+		"external_ref": {
+			"_type": "PARTY_REF",
+			"namespace": "DEMOGRAPHIC",
+			"type": "PERSON",
+			"id": {
+				"_type": "HIER_OBJECT_ID",
+				"value": "b3bfe1ab-45fb-49b8-bfa8-9fce9df7d97f"
+			}
+		},
+		"name": "Dr. Yamamoto"
+	},
+	"context": {
+		"_type": "EVENT_CONTEXT",
+		"start_time": {
+			"_type": "DV_DATE_TIME",
+			"value": "2024-05-18T18:46:12.661Z"
+		},
+		"setting": {
+			"_type": "DV_CODED_TEXT",
+			"value": "home",
+			"defining_code": {
+				"_type": "CODE_PHRASE",
+				"terminology_id": {
+					"_type": "TERMINOLOGY_ID",
+					"value": "openehr"
+				},
+				"code_string": "225"
+			}
+		},
+		"participations": [
+			{
+				"_type": "PARTICIPATION",
+				"function": {
+					"_type": "DV_TEXT",
+					"value": "legal guardian consent author"
+				},
+				"mode": {
+					"_type": "DV_CODED_TEXT",
+					"value": "not specified",
+					"defining_code": {
+						"_type": "CODE_PHRASE",
+						"terminology_id": {
+							"_type": "TERMINOLOGY_ID",
+							"value": "openehr"
+						},
+						"code_string": "193"
+					}
+				},
+				"performer": {
+					"_type": "PARTY_RELATED",
+					"name": "Charles Connor",
+					"relationship": {
+						"_type": "DV_CODED_TEXT",
+						"value": "father",
+						"defining_code": {
+							"_type": "CODE_PHRASE",
+							"terminology_id": {
+								"_type": "TERMINOLOGY_ID",
+								"value": "openehr"
+							},
+							"code_string": "9"
+						}
+					}
+				}
+			}
+		]
+	},
+	"content": [
+		{
+			"_type": "OBSERVATION",
+			"name": {
+				"_type": "DV_TEXT",
+				"value": "Equipmentname"
+			},
+			"archetype_details": {
+				"archetype_id": {
+					"value": "openEHR-EHR-OBSERVATION.equipmentname.v0"
+				},
+				"template_id": {
+					"value": "staticISO"
+				},
+				"rm_version": "1.0.2"
+			},
+			"language": {
+				"_type": "CODE_PHRASE",
+				"terminology_id": {
+					"_type": "TERMINOLOGY_ID",
+					"value": "ISO_639-1"
+				},
+				"code_string": "ru"
+			},
+			"encoding": {
+				"_type": "CODE_PHRASE",
+				"terminology_id": {
+					"_type": "TERMINOLOGY_ID",
+					"value": "IANA_character-sets"
+				},
+				"code_string": "UTF-8"
+			},
+			"subject": {
+				"_type": "PARTY_SELF"
+			},
+			"data": {
+				"name": {
+					"_type": "DV_TEXT",
+					"value": "Event Series"
+				},
+				"origin": {
+					"_type": "DV_DATE_TIME",
+					"value": "2024-05-18T18:46:12.663Z"
+				},
+				"events": [
+					{
+						"_type": "POINT_EVENT",
+						"name": {
+							"_type": "DV_TEXT",
+							"value": "Любое событие"
+						},
+						"time": {
+							"_type": "DV_DATE_TIME",
+							"value": "2024-05-18T18:46:12.663Z"
+						},
+						"data": {
+							"_type": "ITEM_TREE",
+							"name": {
+								"_type": "DV_TEXT",
+								"value": "Дерево"
+							},
+							"items": [
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Наименование оборудования"
+									},
+									"value": {
+										"_type": "DV_TEXT",
+										"value": "Устройство заземления автоцистерн"
+									},
+									"archetype_node_id": "at0005"
+								}
+							],
+							"archetype_node_id": "at0003"
+						},
+						"archetype_node_id": "at0002"
+					}
+				],
+				"archetype_node_id": "at0001"
+			},
+			"archetype_node_id": "openEHR-EHR-OBSERVATION.equipmentname.v0"
+		},
+		{
+			"_type": "OBSERVATION",
+			"name": {
+				"_type": "DV_TEXT",
+				"value": "Equipmentmodel"
+			},
+			"archetype_details": {
+				"archetype_id": {
+					"value": "openEHR-EHR-OBSERVATION.equipmentmodel.v0"
+				},
+				"template_id": {
+					"value": "staticISO"
+				},
+				"rm_version": "1.0.2"
+			},
+			"language": {
+				"_type": "CODE_PHRASE",
+				"terminology_id": {
+					"_type": "TERMINOLOGY_ID",
+					"value": "ISO_639-1"
+				},
+				"code_string": "ru"
+			},
+			"encoding": {
+				"_type": "CODE_PHRASE",
+				"terminology_id": {
+					"_type": "TERMINOLOGY_ID",
+					"value": "IANA_character-sets"
+				},
+				"code_string": "UTF-8"
+			},
+			"subject": {
+				"_type": "PARTY_SELF"
+			},
+			"data": {
+				"name": {
+					"_type": "DV_TEXT",
+					"value": "Event Series"
+				},
+				"origin": {
+					"_type": "DV_DATE_TIME",
+					"value": "2024-05-18T18:46:12.667Z"
+				},
+				"events": [
+					{
+						"_type": "POINT_EVENT",
+						"name": {
+							"_type": "DV_TEXT",
+							"value": "Любое событие"
+						},
+						"time": {
+							"_type": "DV_DATE_TIME",
+							"value": "2024-05-18T18:46:12.667Z"
+						},
+						"data": {
+							"_type": "ITEM_TREE",
+							"name": {
+								"_type": "DV_TEXT",
+								"value": "Дерево"
+							},
+							"items": [
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Модель"
+									},
+									"value": {
+										"_type": "DV_TEXT",
+										"value": "SSH2362M"
+									},
+									"archetype_node_id": "at0004"
+								}
+							],
+							"archetype_node_id": "at0003"
+						},
+						"archetype_node_id": "at0002"
+					}
+				],
+				"archetype_node_id": "at0001"
+			},
+			"archetype_node_id": "openEHR-EHR-OBSERVATION.equipmentmodel.v0"
+		},
+		{
+			"_type": "OBSERVATION",
+			"name": {
+				"_type": "DV_TEXT",
+				"value": "Manufacturername"
+			},
+			"archetype_details": {
+				"archetype_id": {
+					"value": "openEHR-EHR-OBSERVATION.manufacturername.v0"
+				},
+				"template_id": {
+					"value": "staticISO"
+				},
+				"rm_version": "1.0.2"
+			},
+			"language": {
+				"_type": "CODE_PHRASE",
+				"terminology_id": {
+					"_type": "TERMINOLOGY_ID",
+					"value": "ISO_639-1"
+				},
+				"code_string": "ru"
+			},
+			"encoding": {
+				"_type": "CODE_PHRASE",
+				"terminology_id": {
+					"_type": "TERMINOLOGY_ID",
+					"value": "IANA_character-sets"
+				},
+				"code_string": "UTF-8"
+			},
+			"subject": {
+				"_type": "PARTY_SELF"
+			},
+			"data": {
+				"name": {
+					"_type": "DV_TEXT",
+					"value": "Event Series"
+				},
+				"origin": {
+					"_type": "DV_DATE_TIME",
+					"value": "2024-05-18T18:46:12.669Z"
+				},
+				"events": [
+					{
+						"_type": "POINT_EVENT",
+						"name": {
+							"_type": "DV_TEXT",
+							"value": "Любое событие"
+						},
+						"time": {
+							"_type": "DV_DATE_TIME",
+							"value": "2024-05-18T18:46:12.669Z"
+						},
+						"data": {
+							"_type": "ITEM_TREE",
+							"name": {
+								"_type": "DV_TEXT",
+								"value": "Дерево"
+							},
+							"items": [
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Наименование производителя"
+									},
+									"value": {
+										"_type": "DV_TEXT",
+										"value": "Bosch"
+									},
+									"archetype_node_id": "at0004"
+								}
+							],
+							"archetype_node_id": "at0003"
+						},
+						"archetype_node_id": "at0002"
+					}
+				],
+				"archetype_node_id": "at0001"
+			},
+			"archetype_node_id": "openEHR-EHR-OBSERVATION.manufacturername.v0"
+		},
+		{
+			"_type": "OBSERVATION",
+			"name": {
+				"_type": "DV_TEXT",
+				"value": "Specs"
+			},
+			"archetype_details": {
+				"archetype_id": {
+					"value": "openEHR-EHR-OBSERVATION.specs.v0"
+				},
+				"template_id": {
+					"value": "staticISO"
+				},
+				"rm_version": "1.0.2"
+			},
+			"language": {
+				"_type": "CODE_PHRASE",
+				"terminology_id": {
+					"_type": "TERMINOLOGY_ID",
+					"value": "ISO_639-1"
+				},
+				"code_string": "ru"
+			},
+			"encoding": {
+				"_type": "CODE_PHRASE",
+				"terminology_id": {
+					"_type": "TERMINOLOGY_ID",
+					"value": "IANA_character-sets"
+				},
+				"code_string": "UTF-8"
+			},
+			"subject": {
+				"_type": "PARTY_SELF"
+			},
+			"data": {
+				"name": {
+					"_type": "DV_TEXT",
+					"value": "Event Series"
+				},
+				"origin": {
+					"_type": "DV_DATE_TIME",
+					"value": "2024-05-18T18:46:12.672Z"
+				},
+				"events": [
+					{
+						"_type": "POINT_EVENT",
+						"name": {
+							"_type": "DV_TEXT",
+							"value": "Любое событие"
+						},
+						"time": {
+							"_type": "DV_DATE_TIME",
+							"value": "2024-05-18T18:46:12.672Z"
+						},
+						"data": {
+							"_type": "ITEM_TREE",
+							"name": {
+								"_type": "DV_TEXT",
+								"value": "Дерево"
+							},
+							"items": [
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Мощность"
+									},
+									"value": {
+										"_type": "DV_QUANTITY",
+										"units": "MW",
+										"magnitude": 167.1
+									},
+									"archetype_node_id": "at0004"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Доминирующий материал"
+									},
+									"value": {
+										"_type": "DV_TEXT",
+										"value": "Метал"
+									},
+									"archetype_node_id": "at0005"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Рабочая тмепература мин"
+									},
+									"value": {
+										"_type": "DV_QUANTITY",
+										"units": "°C",
+										"magnitude": 937.5
+									},
+									"archetype_node_id": "at0006"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Рабочая температура макс"
+									},
+									"value": {
+										"_type": "DV_QUANTITY",
+										"units": "°C",
+										"magnitude": 878.4
+									},
+									"archetype_node_id": "at0007"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Давление"
+									},
+									"value": {
+										"_type": "DV_QUANTITY",
+										"units": "Pa",
+										"magnitude": 347.8
+									},
+									"archetype_node_id": "at0008"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Новый элемент"
+									},
+									"value": {
+										"_type": "DV_QUANTITY",
+										"units": "V",
+										"magnitude": 68.6
+									},
+									"archetype_node_id": "at0009"
+								}
+							],
+							"archetype_node_id": "at0003"
+						},
+						"archetype_node_id": "at0002"
+					}
+				],
+				"archetype_node_id": "at0001"
+			},
+			"archetype_node_id": "openEHR-EHR-OBSERVATION.specs.v0"
+		}
+	],
+	"archetype_node_id": "openEHR-EHR-COMPOSITION.staticspecs.v0",
+	"uid": {
+		"_type": "OBJECT_VERSION_ID",
+		"value": "d4728176-9529-4279-9ada-766ace4ec972::local.ehrbase.org::1"
+	}
+}

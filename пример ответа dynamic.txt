@@ -1,0 +1,265 @@
+{
+	"_type": "COMPOSITION",
+	"name": {
+		"_type": "DV_TEXT",
+		"value": "Dynamicspecs"
+	},
+	"archetype_details": {
+		"archetype_id": {
+			"value": "openEHR-EHR-COMPOSITION.dynamicspecs.v0"
+		},
+		"template_id": {
+			"value": "dynamicISO"
+		},
+		"rm_version": "1.0.2"
+	},
+	"language": {
+		"_type": "CODE_PHRASE",
+		"terminology_id": {
+			"_type": "TERMINOLOGY_ID",
+			"value": "ISO_639-1"
+		},
+		"code_string": "ru"
+	},
+	"territory": {
+		"_type": "CODE_PHRASE",
+		"terminology_id": {
+			"_type": "TERMINOLOGY_ID",
+			"value": "ISO_3166-1"
+		},
+		"code_string": "UY"
+	},
+	"category": {
+		"_type": "DV_CODED_TEXT",
+		"value": "event",
+		"defining_code": {
+			"_type": "CODE_PHRASE",
+			"terminology_id": {
+				"_type": "TERMINOLOGY_ID",
+				"value": "openehr"
+			},
+			"code_string": "433"
+		}
+	},
+	"composer": {
+		"_type": "PARTY_IDENTIFIED",
+		"external_ref": {
+			"_type": "PARTY_REF",
+			"namespace": "DEMOGRAPHIC",
+			"type": "PERSON",
+			"id": {
+				"_type": "HIER_OBJECT_ID",
+				"value": "a3fe879e-c5d5-480f-87c3-f2bf8c56611a"
+			}
+		},
+		"name": "Dr. Yamamoto"
+	},
+	"context": {
+		"_type": "EVENT_CONTEXT",
+		"start_time": {
+			"_type": "DV_DATE_TIME",
+			"value": "2024-05-18T18:50:59.063Z"
+		},
+		"setting": {
+			"_type": "DV_CODED_TEXT",
+			"value": "home",
+			"defining_code": {
+				"_type": "CODE_PHRASE",
+				"terminology_id": {
+					"_type": "TERMINOLOGY_ID",
+					"value": "openehr"
+				},
+				"code_string": "225"
+			}
+		},
+		"participations": [
+			{
+				"_type": "PARTICIPATION",
+				"function": {
+					"_type": "DV_TEXT",
+					"value": "legal guardian consent author"
+				},
+				"mode": {
+					"_type": "DV_CODED_TEXT",
+					"value": "not specified",
+					"defining_code": {
+						"_type": "CODE_PHRASE",
+						"terminology_id": {
+							"_type": "TERMINOLOGY_ID",
+							"value": "openehr"
+						},
+						"code_string": "193"
+					}
+				},
+				"performer": {
+					"_type": "PARTY_RELATED",
+					"name": "Alexandra Alamo",
+					"relationship": {
+						"_type": "DV_CODED_TEXT",
+						"value": "mother",
+						"defining_code": {
+							"_type": "CODE_PHRASE",
+							"terminology_id": {
+								"_type": "TERMINOLOGY_ID",
+								"value": "openehr"
+							},
+							"code_string": "10"
+						}
+					}
+				}
+			}
+		]
+	},
+	"content": [
+		{
+			"_type": "OBSERVATION",
+			"name": {
+				"_type": "DV_TEXT",
+				"value": "Dynamicspecs"
+			},
+			"archetype_details": {
+				"archetype_id": {
+					"value": "openEHR-EHR-OBSERVATION.dynamicspecs.v0"
+				},
+				"template_id": {
+					"value": "dynamicISO"
+				},
+				"rm_version": "1.0.2"
+			},
+			"language": {
+				"_type": "CODE_PHRASE",
+				"terminology_id": {
+					"_type": "TERMINOLOGY_ID",
+					"value": "ISO_639-1"
+				},
+				"code_string": "ru"
+			},
+			"encoding": {
+				"_type": "CODE_PHRASE",
+				"terminology_id": {
+					"_type": "TERMINOLOGY_ID",
+					"value": "IANA_character-sets"
+				},
+				"code_string": "UTF-8"
+			},
+			"subject": {
+				"_type": "PARTY_SELF"
+			},
+			"data": {
+				"name": {
+					"_type": "DV_TEXT",
+					"value": "Event Series"
+				},
+				"origin": {
+					"_type": "DV_DATE_TIME",
+					"value": "2024-05-18T18:50:59.068Z"
+				},
+				"events": [
+					{
+						"_type": "POINT_EVENT",
+						"name": {
+							"_type": "DV_TEXT",
+							"value": "Любое событие"
+						},
+						"time": {
+							"_type": "DV_DATE_TIME",
+							"value": "2024-05-18T18:50:59.068Z"
+						},
+						"data": {
+							"_type": "ITEM_TREE",
+							"name": {
+								"_type": "DV_TEXT",
+								"value": "Дерево"
+							},
+							"items": [
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Дата установки"
+									},
+									"value": {
+										"_type": "DV_DATE",
+										"value": "2024-05-18"
+									},
+									"archetype_node_id": "at0004"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Дата последнего технического обслуживания"
+									},
+									"value": {
+										"_type": "DV_DATE",
+										"value": "2022-05-18"
+									},
+									"archetype_node_id": "at0005"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Дата следующего планового обслуживания"
+									},
+									"value": {
+										"_type": "DV_DATE",
+										"value": "2024-05-18"
+									},
+									"archetype_node_id": "at0007"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Записи о неисправностях и ремонте"
+									},
+									"value": {
+										"_type": "DV_TEXT",
+										"value": "Исправно"
+									},
+									"archetype_node_id": "at0008"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Координаты установленного оборудования широта"
+									},
+									"value": {
+										"_type": "DV_QUANTITY",
+										"units": "°",
+										"magnitude": 82.35643
+									},
+									"archetype_node_id": "at0011"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Координаты установленного оборудования долгота"
+									},
+									"value": {
+										"_type": "DV_QUANTITY",
+										"units": "°",
+										"magnitude": 46.24794
+									},
+									"archetype_node_id": "at0012"
+								}
+							],
+							"archetype_node_id": "at0003"
+						},
+						"archetype_node_id": "at0002"
+					}
+				],
+				"archetype_node_id": "at0001"
+			},
+			"archetype_node_id": "openEHR-EHR-OBSERVATION.dynamicspecs.v0"
+		}
+	],
+	"archetype_node_id": "openEHR-EHR-COMPOSITION.dynamicspecs.v0",
+	"uid": {
+		"_type": "OBJECT_VERSION_ID",
+		"value": "5bd1c363-9ec3-4fca-81a8-4befccaff5eb::local.ehrbase.org::1"
+	}
+}

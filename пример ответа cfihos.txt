@@ -1,0 +1,287 @@
+{
+	"_type": "COMPOSITION",
+	"name": {
+		"_type": "DV_TEXT",
+		"value": "Cfihosspecs"
+	},
+	"archetype_details": {
+		"archetype_id": {
+			"value": "openEHR-EHR-COMPOSITION.cfihosspecs.v0"
+		},
+		"template_id": {
+			"value": "cfihosspecs"
+		},
+		"rm_version": "1.0.2"
+	},
+	"language": {
+		"_type": "CODE_PHRASE",
+		"terminology_id": {
+			"_type": "TERMINOLOGY_ID",
+			"value": "ISO_639-1"
+		},
+		"code_string": "ru"
+	},
+	"territory": {
+		"_type": "CODE_PHRASE",
+		"terminology_id": {
+			"_type": "TERMINOLOGY_ID",
+			"value": "ISO_3166-1"
+		},
+		"code_string": "UY"
+	},
+	"category": {
+		"_type": "DV_CODED_TEXT",
+		"value": "event",
+		"defining_code": {
+			"_type": "CODE_PHRASE",
+			"terminology_id": {
+				"_type": "TERMINOLOGY_ID",
+				"value": "openehr"
+			},
+			"code_string": "433"
+		}
+	},
+	"composer": {
+		"_type": "PARTY_IDENTIFIED",
+		"external_ref": {
+			"_type": "PARTY_REF",
+			"namespace": "DEMOGRAPHIC",
+			"type": "PERSON",
+			"id": {
+				"_type": "HIER_OBJECT_ID",
+				"value": "4636dcfa-57c5-4add-bb09-f166c562c2b9"
+			}
+		},
+		"name": "Dr. House"
+	},
+	"context": {
+		"_type": "EVENT_CONTEXT",
+		"start_time": {
+			"_type": "DV_DATE_TIME",
+			"value": "2024-05-18T19:28:17.767Z"
+		},
+		"setting": {
+			"_type": "DV_CODED_TEXT",
+			"value": "home",
+			"defining_code": {
+				"_type": "CODE_PHRASE",
+				"terminology_id": {
+					"_type": "TERMINOLOGY_ID",
+					"value": "openehr"
+				},
+				"code_string": "225"
+			}
+		},
+		"participations": [
+			{
+				"_type": "PARTICIPATION",
+				"function": {
+					"_type": "DV_TEXT",
+					"value": "legal guardian consent author"
+				},
+				"mode": {
+					"_type": "DV_CODED_TEXT",
+					"value": "not specified",
+					"defining_code": {
+						"_type": "CODE_PHRASE",
+						"terminology_id": {
+							"_type": "TERMINOLOGY_ID",
+							"value": "openehr"
+						},
+						"code_string": "193"
+					}
+				},
+				"performer": {
+					"_type": "PARTY_RELATED",
+					"name": "Charles Connor",
+					"relationship": {
+						"_type": "DV_CODED_TEXT",
+						"value": "father",
+						"defining_code": {
+							"_type": "CODE_PHRASE",
+							"terminology_id": {
+								"_type": "TERMINOLOGY_ID",
+								"value": "openehr"
+							},
+							"code_string": "9"
+						}
+					}
+				}
+			}
+		]
+	},
+	"content": [
+		{
+			"_type": "OBSERVATION",
+			"name": {
+				"_type": "DV_TEXT",
+				"value": "Cfihos"
+			},
+			"archetype_details": {
+				"archetype_id": {
+					"value": "openEHR-EHR-OBSERVATION.cfihos.v0"
+				},
+				"template_id": {
+					"value": "cfihosspecs"
+				},
+				"rm_version": "1.0.2"
+			},
+			"language": {
+				"_type": "CODE_PHRASE",
+				"terminology_id": {
+					"_type": "TERMINOLOGY_ID",
+					"value": "ISO_639-1"
+				},
+				"code_string": "ru"
+			},
+			"encoding": {
+				"_type": "CODE_PHRASE",
+				"terminology_id": {
+					"_type": "TERMINOLOGY_ID",
+					"value": "IANA_character-sets"
+				},
+				"code_string": "UTF-8"
+			},
+			"subject": {
+				"_type": "PARTY_SELF"
+			},
+			"data": {
+				"name": {
+					"_type": "DV_TEXT",
+					"value": "Event Series"
+				},
+				"origin": {
+					"_type": "DV_DATE_TIME",
+					"value": "2024-05-18T19:28:17.768Z"
+				},
+				"events": [
+					{
+						"_type": "POINT_EVENT",
+						"name": {
+							"_type": "DV_TEXT",
+							"value": "Любое событие"
+						},
+						"time": {
+							"_type": "DV_DATE_TIME",
+							"value": "2024-05-18T19:28:17.768Z"
+						},
+						"data": {
+							"_type": "ITEM_TREE",
+							"name": {
+								"_type": "DV_TEXT",
+								"value": "Дерево"
+							},
+							"items": [
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Название проекта"
+									},
+									"value": {
+										"_type": "DV_TEXT",
+										"value": "Нано заселение"
+									},
+									"archetype_node_id": "at0004"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Номер проекта"
+									},
+									"value": {
+										"_type": "DV_COUNT",
+										"magnitude": 4
+									},
+									"archetype_node_id": "at0005"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Описание проекта"
+									},
+									"value": {
+										"_type": "DV_TEXT",
+										"value": "Дом для работников компании"
+									},
+									"archetype_node_id": "at0006"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Заказчик"
+									},
+									"value": {
+										"_type": "DV_TEXT",
+										"value": "РосНано"
+									},
+									"archetype_node_id": "at0007"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Подрядчик"
+									},
+									"value": {
+										"_type": "DV_TEXT",
+										"value": "РосРегионСтрой"
+									},
+									"archetype_node_id": "at0008"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Дата начала проекта"
+									},
+									"value": {
+										"_type": "DV_DATE",
+										"value": "2024-05-18"
+									},
+									"archetype_node_id": "at0009"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Текущий статус проекта"
+									},
+									"value": {
+										"_type": "DV_TEXT",
+										"value": "В процессеv"
+									},
+									"archetype_node_id": "at0010"
+								},
+								{
+									"_type": "ELEMENT",
+									"name": {
+										"_type": "DV_TEXT",
+										"value": "Полный адрес объекта"
+									},
+									"value": {
+										"_type": "DV_TEXT",
+										"value": "Россия Краснодарский край город Горячий Ключ улица Ленина дом Пятнадцать"
+									},
+									"archetype_node_id": "at0012"
+								}
+							],
+							"archetype_node_id": "at0003"
+						},
+						"archetype_node_id": "at0002"
+					}
+				],
+				"archetype_node_id": "at0001"
+			},
+			"archetype_node_id": "openEHR-EHR-OBSERVATION.cfihos.v0"
+		}
+	],
+	"archetype_node_id": "openEHR-EHR-COMPOSITION.cfihosspecs.v0",
+	"uid": {
+		"_type": "OBJECT_VERSION_ID",
+		"value": "cf52c003-f73f-4541-92aa-b7d627c266e6::local.ehrbase.org::1"
+	}
+}

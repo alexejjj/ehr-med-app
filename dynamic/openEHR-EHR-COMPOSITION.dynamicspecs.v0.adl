@@ -1,0 +1,56 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-COMPOSITION.dynamicspecs.v0
+
+concept
+	[at0000]	-- Dynamicspecs
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"7D0C278EA56998CF5E48D306D52A850A">
+	>
+
+definition
+	COMPOSITION[at0000] matches {	-- Dynamicspecs
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {[openehr::433]}
+			}
+		}
+		content cardinality matches {0..*; unordered} matches {
+			allow_archetype OBSERVATION[at0001] occurrences matches {0..*} matches {	-- Динамические состояния
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.dynamicspecs\.v0/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Dynamicspecs">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Динамические состояния">
+					description = <"*">
+				>
+			>
+		>
+	>
