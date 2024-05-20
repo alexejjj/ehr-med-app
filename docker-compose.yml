@@ -33,18 +33,18 @@ services:
       EHRBASE_USER: ehrbase_restricted
       EHRBASE_PASSWORD: ehrbase_restricted
 
-  mongodb:
-    image: mongo
-    ports:
-      - "5050:27017"
-    networks:
-      - ehrbase-net
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: admin
-      MONGO_INITDB_DATABASE: ehrbase
-    volumes:
-      - ./data/mongo:/data/db
+#  mongodb:
+#    image: mongo
+#    ports:
+#      - "5050:27017"
+#    networks:
+#      - ehrbase-net
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: admin
+#      MONGO_INITDB_ROOT_PASSWORD: admin
+#      MONGO_INITDB_DATABASE: ehrbase
+#    volumes:
+#      - ./data/mongo:/data/db
 
 networks:
   ehrbase-net: { }

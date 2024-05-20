@@ -1,0 +1,344 @@
+{
+   "_type": "COMPOSITION",
+   "name": {
+      "_type": "DV_TEXT",
+      "value": "Main"
+   },
+   "archetype_details": {
+      "archetype_id": {
+         "value": "openEHR-EHR-COMPOSITION.main.v2"
+      },
+      "template_id": {
+         "value": "main monitoring v2"
+      },
+      "rm_version": "1.0.2"
+   },
+   "archetype_node_id": "openEHR-EHR-COMPOSITION.main.v2",
+   "language": {
+      "terminology_id": {
+         "_type": "TERMINOLOGY_ID",
+         "value": "ISO_639-1"
+      },
+      "code_string": "ru"
+   },
+   "territory": {
+      "terminology_id": {
+         "_type": "TERMINOLOGY_ID",
+         "value": "ISO_3166-1"
+      },
+      "code_string": "UY"
+   },
+   "category": {
+      "value": "event",
+      "defining_code": {
+         "terminology_id": {
+            "_type": "TERMINOLOGY_ID",
+            "value": "openehr"
+         },
+         "code_string": "433"
+      }
+   },
+   "composer": {
+      "_type": "PARTY_IDENTIFIED",
+      "external_ref": {
+         "id": {
+            "_type": "HIER_OBJECT_ID",
+            "value": "fe395554-715c-4fa9-b473-0f43a7dfedf2"
+         },
+         "namespace": "DEMOGRAPHIC",
+         "type": "PERSON"
+      },
+      "name": "Dr. House"
+   },
+   "context": {
+      "start_time": {
+         "value": "2024-05-03T08:06:27.803Z"
+      },
+      "setting": {
+         "value": "home",
+         "defining_code": {
+            "terminology_id": {
+               "_type": "TERMINOLOGY_ID",
+               "value": "openehr"
+            },
+            "code_string": "225"
+         }
+      },
+      "participations": [
+         {
+            "function": {
+               "_type": "DV_TEXT",
+               "value": "companion"
+            },
+            "performer": {
+               "_type": "PARTY_RELATED",
+               "name": "Daniel Duncan",
+               "relationship": {
+                  "value": "bother",
+                  "defining_code": {
+                     "terminology_id": {
+                        "_type": "TERMINOLOGY_ID",
+                        "value": "openehr"
+                     },
+                     "code_string": "23"
+                  }
+               }
+            },
+            "mode": {
+               "value": "not specified",
+               "defining_code": {
+                  "terminology_id": {
+                     "_type": "TERMINOLOGY_ID",
+                     "value": "openehr"
+                  },
+                  "code_string": "193"
+               }
+            }
+         }
+      ]
+   },
+   "content": [
+      {
+         "_type": "OBSERVATION",
+         "name": {
+            "_type": "DV_TEXT",
+            "value": "Visitdate"
+         },
+         "archetype_details": {
+            "archetype_id": {
+               "value": "openEHR-EHR-OBSERVATION.visitdate.v0"
+            },
+            "template_id": {
+               "value": "main monitoring v2"
+            },
+            "rm_version": "1.0.2"
+         },
+         "archetype_node_id": "openEHR-EHR-OBSERVATION.visitdate.v0",
+         "language": {
+            "terminology_id": {
+               "_type": "TERMINOLOGY_ID",
+               "value": "ISO_639-1"
+            },
+            "code_string": "ru"
+         },
+         "encoding": {
+            "terminology_id": {
+               "_type": "TERMINOLOGY_ID",
+               "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+         },
+         "subject": {
+            "_type": "PARTY_SELF"
+         },
+         "data": {
+            "_type": "HISTORY",
+            "name": {
+               "_type": "DV_TEXT",
+               "value": "Event Series"
+            },
+            "archetype_node_id": "at1234",
+            "origin": {
+               "value": "2024-05-03T08:06:27.804Z"
+            },
+            "events": [
+               {
+                  "_type": "POINT_EVENT",
+                  "name": {
+                     "_type": "DV_TEXT",
+                     "value": "Любое событие"
+                  },
+                  "archetype_node_id": "at1235",
+                  "time": {
+                     "value": "2024-05-03T08:06:27.804Z"
+                  },
+                  "data": {
+                     "_type": "ITEM_TREE",
+                     "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Дерево"
+                     },
+                     "archetype_node_id": "at1236",
+                     "items": [
+                        {
+                           "_type": "ELEMENT",
+                           "name": {
+                              "_type": "DV_TEXT",
+                              "value": "Дата визита"
+                           },
+                           "archetype_node_id": "at1237",
+                           "value": {
+                              "_type": "DV_DATE",
+                              "value": "xxx3"
+                           }
+                        }
+                     ]
+                  }
+               }
+            ]
+         }
+      },
+      {
+         "_type": "OBSERVATION",
+         "name": {
+            "_type": "DV_TEXT",
+            "value": "Weight"
+         },
+         "archetype_details": {
+            "archetype_id": {
+               "value": "openEHR-EHR-OBSERVATION.weight.v2"
+            },
+            "template_id": {
+               "value": "main monitoring v2"
+            },
+            "rm_version": "1.0.2"
+         },
+         "archetype_node_id": "openEHR-EHR-OBSERVATION.weight.v2",
+         "language": {
+            "terminology_id": {
+               "_type": "TERMINOLOGY_ID",
+               "value": "ISO_639-1"
+            },
+            "code_string": "ru"
+         },
+         "encoding": {
+            "terminology_id": {
+               "_type": "TERMINOLOGY_ID",
+               "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+         },
+         "subject": {
+            "_type": "PARTY_SELF"
+         },
+         "data": {
+            "_type": "HISTORY",
+            "name": {
+               "_type": "DV_TEXT",
+               "value": "Event Series"
+            },
+            "archetype_node_id": "at4001",
+            "origin": {
+               "value": "2024-05-03T08:06:27.804Z"
+            },
+            "events": [
+               {
+                  "_type": "POINT_EVENT",
+                  "name": {
+                     "_type": "DV_TEXT",
+                     "value": "Любое событие"
+                  },
+                  "archetype_node_id": "at4002",
+                  "time": {
+                     "value": "2024-05-03T08:06:27.804Z"
+                  },
+                  "data": {
+                     "_type": "ITEM_TREE",
+                     "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Дерево"
+                     },
+                     "archetype_node_id": "at4003",
+                     "items": [
+                        {
+                           "_type": "ELEMENT",
+                           "name": {
+                              "_type": "DV_TEXT",
+                              "value": "Вес пациента"
+                           },
+                           "archetype_node_id": "at4004",
+                           "value": {
+                              "_type": "DV_QUANTITY",
+                              "magnitude": xxx1,
+                              "units": "lb"
+                           }
+                        }
+                     ]
+                  }
+               }
+            ]
+         }
+      },
+      {
+         "_type": "OBSERVATION",
+         "name": {
+            "_type": "DV_TEXT",
+            "value": "Height"
+         },
+         "archetype_details": {
+            "archetype_id": {
+               "value": "openEHR-EHR-OBSERVATION.height.v2"
+            },
+            "template_id": {
+               "value": "main monitoring v2"
+            },
+            "rm_version": "1.0.2"
+         },
+         "archetype_node_id": "openEHR-EHR-OBSERVATION.height.v2",
+         "language": {
+            "terminology_id": {
+               "_type": "TERMINOLOGY_ID",
+               "value": "ISO_639-1"
+            },
+            "code_string": "ru"
+         },
+         "encoding": {
+            "terminology_id": {
+               "_type": "TERMINOLOGY_ID",
+               "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+         },
+         "subject": {
+            "_type": "PARTY_SELF"
+         },
+         "data": {
+            "_type": "HISTORY",
+            "name": {
+               "_type": "DV_TEXT",
+               "value": "Event Series"
+            },
+            "archetype_node_id": "at0601",
+            "origin": {
+               "value": "2024-05-03T08:06:27.805Z"
+            },
+            "events": [
+               {
+                  "_type": "POINT_EVENT",
+                  "name": {
+                     "_type": "DV_TEXT",
+                     "value": "Любое событие"
+                  },
+                  "archetype_node_id": "at0602",
+                  "time": {
+                     "value": "2024-05-03T08:06:27.805Z"
+                  },
+                  "data": {
+                     "_type": "ITEM_TREE",
+                     "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Дерево"
+                     },
+                     "archetype_node_id": "at0603",
+                     "items": [
+                        {
+                           "_type": "ELEMENT",
+                           "name": {
+                              "_type": "DV_TEXT",
+                              "value": "Рост пациента"
+                           },
+                           "archetype_node_id": "at0604",
+                           "value": {
+                              "_type": "DV_QUANTITY",
+                              "magnitude": xxx2,
+                              "units": "ft"
+                           }
+                        }
+                     ]
+                  }
+               }
+            ]
+         }
+      }
+   ]
+}
